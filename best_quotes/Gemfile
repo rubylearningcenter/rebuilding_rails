@@ -1,0 +1,6 @@
+# best_quotes/Gemfile
+
+source 'https://rubygems.org'
+gem "rulers", path: "../rulers" # Your gem name
+
+gem 'puma'
