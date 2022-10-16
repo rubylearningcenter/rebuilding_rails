@@ -3,7 +3,7 @@ $LOAD_PATH << File.join(
 )
 
 require 'rulers'
-require 'quotes_controller'
+# require 'quotes_controller'
 
 module BestQuotes
   class Application < Rulers::Application

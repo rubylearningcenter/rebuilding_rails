@@ -2,6 +2,8 @@
 
 require 'rulers/version'
 require 'rulers/routing'
+require 'rulers/util'
+require 'rulers/dependencies'
 
 # “http://host.com/category/action”
 
