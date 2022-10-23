@@ -4,6 +4,7 @@ require 'rulers/version'
 require 'rulers/routing'
 require 'rulers/util'
 require 'rulers/dependencies'
+require 'rulers/controller'
 
 # “http://host.com/category/action”
 
@@ -41,14 +42,6 @@ module Rulers
         HTML_CONTENT_TYPE,
         [text]
       ]
-    end
-  end
-
-  class Controller
-    attr_reader :environment
-
-    def initialize(environment)
-      @environment = environment
     end
   end
 end

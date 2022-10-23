@@ -34,6 +34,7 @@ but with extra awesome."
   # spec.add_dependency "example-gem", "~> 1.0"
 
   # Let's avoid Rack 3.x+
+  spec.add_runtime_dependency 'erubis'
   spec.add_runtime_dependency 'rack', '~>2.2'
 
   # For testing
