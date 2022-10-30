@@ -1,14 +1,25 @@
 require 'erubis'
+require "rulers/file_model"
 
 module Rulers
   class Controller
+    include Rulers::Model
+
     attr_reader :environment
+    attr_reader :called_render_explicitly
 
     def initialize(environment)
       @environment = environment
+      @called_render_explicitly = false
+    end
+
+    def rendered?
+      @called_render_explicitly
     end
 
     def render(view_name, locals = {})
+      @called_render_explicitly = true
+
       file_name = File.join(
         'app',
         'views',

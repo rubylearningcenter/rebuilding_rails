@@ -5,6 +5,7 @@ require 'rulers/routing'
 require 'rulers/util'
 require 'rulers/dependencies'
 require 'rulers/controller'
+require 'rulers/file_model'
 
 # “http://host.com/category/action”
 
@@ -32,8 +33,12 @@ module Rulers
       controller = klass.new(environment)
 
       text = begin
+        # You probably call render, right?
         controller.send(action)
-      rescue StandardError
+        controller.render(action) unless controller.rendered?
+      rescue StandardError => e
+        binding.irb
+        puts e
         'Oops!'
       end
 

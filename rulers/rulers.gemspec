@@ -33,8 +33,10 @@ but with extra awesome."
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
 
-  # Let's avoid Rack 3.x+
   spec.add_runtime_dependency 'erubis'
+  spec.add_runtime_dependency 'multi_json'
+
+  # Let's avoid Rack 3.x+
   spec.add_runtime_dependency 'rack', '~>2.2'
 
   # For testing
